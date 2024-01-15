@@ -1,0 +1,21 @@
+name: CustomFkUtils
+version: 1.0.0
+main: dev.guerville.customfkutils.CustomFKUtils
+description: Utility plugin to personalize my FallenKingdom games
+author: PaperMC
+website: https://github.com/UnikMask/CustomFkUtils
+prefix: FKUtils
+api-version: '1.20'
+
+softdepend: [ FallenKingdom, Multiverse-Core ]
+
+commands:
+  fkutils:
+    aliases: [ fkutils ]
+    description: CustomFKUtils commands
+    permission: cfku.cfku
+
+permissions:
+  cfku.cfku:
+    description: Permissions to use custom utilities.
+    default: op
