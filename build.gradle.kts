@@ -7,13 +7,17 @@
  */
 plugins {
     id("java-library")
+    id("io.freefair.lombok") version "8.4"
     id("io.papermc.paperweight.userdev") version "1.5.10" // Check for new versions at https://plugins.gradle.org/plugin/io.papermc.paperweight.userdev
     id("com.github.johnrengelman.shadow") version "8.1.1"
 }
 
 group = "dev.guerville.customfkutils"
+version = "1.0.0"
+description = "Utility plugin to personalize my FallenKingdom games"
 
 dependencies {
+    // PaperMC
     compileOnly("io.papermc.paper:paper-api:1.20.4-R0.1-SNAPSHOT")
     paperweight.paperDevBundle("1.20.4-R0.1-SNAPSHOT")
 }
@@ -25,5 +29,16 @@ java {
 tasks {
     assemble {
         dependsOn(reobfJar)
+    }
+
+    processResources {
+        val props = mapOf(
+            "version" to project.version,
+            "description" to project.description
+        )
+        inputs.properties(props)
+        filesMatching("plugin.yml") {
+            expand(props)
+        }
     }
 }

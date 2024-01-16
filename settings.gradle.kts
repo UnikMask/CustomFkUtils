@@ -13,4 +13,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = "CustomFKUtils"
+rootProject.name = "CustomFkUtils"
