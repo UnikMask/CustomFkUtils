@@ -41,6 +41,9 @@ public class CustomFkUtils extends JavaPlugin implements Listener, Saveable {
         } else {
             getLogger().log(Level.INFO, "No configuration found, starting empty.");
         }
+
+        // 2. Commands
+        getCommand("fkload").setExecutor(new LoadCommandExec());
     }
 
     @Override

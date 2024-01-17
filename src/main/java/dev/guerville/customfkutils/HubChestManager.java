@@ -17,7 +17,7 @@ public class HubChestManager implements Saveable {
         chests = new HashMap<>();
         for (String key: config.getKeys(false)) {
             HubChest next = new HubChest();
-            next.load(config.getConfigurationSection(key));
+            next.loadNullable(config.getConfigurationSection(key));
             chests.put(key, next);
         }
     }
