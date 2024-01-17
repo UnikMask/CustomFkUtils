@@ -20,6 +20,7 @@ dependencies {
     // PaperMC
     compileOnly("io.papermc.paper:paper-api:1.20.4-R0.1-SNAPSHOT")
     paperweight.paperDevBundle("1.20.4-R0.1-SNAPSHOT")
+    implementation(files("libs/FallenKingdom-2.22.10.jar"))
 }
 
 java {
