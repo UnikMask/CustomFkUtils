@@ -6,6 +6,8 @@ author: PaperMC
 website: https://github.com/UnikMask/CustomFkUtils
 prefix: FKUtils
 api-version: '1.19'
+authors:
+  - "UnikMask"
 
 softdepend: [ FallenKingdom, Multiverse-Core ]
 
