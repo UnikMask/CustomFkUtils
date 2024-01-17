@@ -9,7 +9,7 @@ api-version: '1.19'
 authors:
   - "UnikMask"
 
-softdepend: [ FallenKingdom, Multiverse-Core ]
+depend: [ FallenKingdom ]
 
 commands:
   fkutils:
