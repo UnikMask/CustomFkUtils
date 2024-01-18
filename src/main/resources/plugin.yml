@@ -12,9 +12,8 @@ authors:
 depend: [ FallenKingdom ]
 
 commands:
-  fkutils:
-    aliases: [ fkutils ]
-    description: CustomFkUtils commands
+  fkload:
+    description: Load FallenKingdom save (stored in CustomFkUtils/)
     permission: cfku.cfku
 
 permissions:

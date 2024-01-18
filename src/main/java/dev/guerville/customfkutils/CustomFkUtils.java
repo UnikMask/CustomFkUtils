@@ -11,6 +11,7 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 import fr.devsylone.fallenkingdom.Fk;
+import fr.devsylone.fkpi.FkPI;
 import dev.guerville.customfkutils.utils.*;
 import lombok.Getter;
 
@@ -41,6 +42,9 @@ public class CustomFkUtils extends JavaPlugin implements Listener, Saveable {
         } else {
             getLogger().log(Level.INFO, "No configuration found, starting empty.");
         }
+
+        // 1.5 Quick Try
+        FkPI.getInstance();
 
         // 2. Commands
         getCommand("fkload").setExecutor(new LoadCommandExec());
